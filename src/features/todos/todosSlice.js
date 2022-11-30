@@ -2,7 +2,7 @@ import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
   todos: [{id:1,title:"Todo 1",completed:true},{id:2,title:"Todo 2",completed:false},{id:3,title:"Todo 3",completed:true}],
-  indexEdit:-1,
+  indexEdit:-1, // used to put updated todo on required index 
 };
 
 export const todosSlice = createSlice({

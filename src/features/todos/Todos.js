@@ -10,11 +10,14 @@ const Todos = () => {
   const refTitle = useRef();
   const refBtn=useRef();
 
+    //  function to set the update index in state 
   const editTodo=(i)=>{
     refTitle.current.value=state.todosReducer.todos[i].title;
     refBtn.current.innerText="Update"
     dispatch(setIndexEdit(i))
   }
+
+  //  function to add or update a todo in state
   const addTodoStart=()=>{
     if(refBtn.current.innerText==="Add"){
       let obj={id:state.todosReducer.todos.length+1,title:refTitle.current.value,completed:false};
